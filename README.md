@@ -25,7 +25,8 @@ CREATE TABLE Pedido (
     total DECIMAL(10,2)
 );
 
--- Create more tables as per your domain model```
+-- Create more tables as per your domain model
+```
 
 ## 2. Download the MySQL Connector for Java
 
