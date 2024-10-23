@@ -69,14 +69,16 @@ public class DatabaseUtil {
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
-}```
+}
+```
 
 ## 4. Create DAO Classes for Each Domain Entity
 For each domain class (e.g., Producto, Pedido), you’ll create a Data Access Object (DAO) to handle database interactions.
 
 Example: ProductoDAO
 
-```import java.sql.*;
+```
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -143,7 +145,8 @@ Example: ProductoServicio
     }
 
     // Add more service methods as needed
-}```
+}
+```
 
 ## 6. Test the Integration
 Write a simple test to verify the database connection and CRUD operations.
@@ -164,7 +167,8 @@ Example Test:
             System.out.println(producto.getNombre() + " - " + producto.getPrecio())
         );
     }
-}```
+}
+```
 
 ## 7. Handle Exceptions and Transactions
 You may want to wrap critical operations in transactions, particularly when you perform multiple database operations that need to succeed or fail together. Here's an example:
@@ -198,7 +202,8 @@ You may want to wrap critical operations in transactions, particularly when you 
             }
         }
     }
-}```
+}
+```
 
 ## 8. Next Steps: Improve Efficiency
 Connection Pooling: Instead of creating a new connection for every request, consider adding a connection pool (like HikariCP) to improve performance.
