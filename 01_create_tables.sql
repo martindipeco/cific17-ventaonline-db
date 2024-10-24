@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS Productos (
     codigoProducto INT PRIMARY KEY,   -- Primary key for Productos
     nombre VARCHAR(100) NOT NULL,
     categoria ENUM('TECNOLOGIA', 'INDUMENTARIA', 'CALZADO', 'DEPORTE', 'HOGAR', 'MUEBLES', 'ELECTRODOMESTICOS') NOT NULL,  -- Add actual categories
-    subcategoria ENUM('CELULARES', 'TABLETS', 'INFORMATICA') NOT NULL,     -- Add actual subcategories
+    subcategoria ENUM('CELULARES', 'TABLETS', 'INFORMATICA'),     -- Add actual subcategories
     precio DECIMAL(10, 2) NOT NULL,  -- Price with two decimal precision
     descuento DECIMAL(10, 2),        -- Discount with two decimal precision
     precioFinal DECIMAL(10, 2),      -- Final price after discount
@@ -103,4 +103,3 @@ CREATE TABLE IF NOT EXISTS Pedidos_Productos (
     FOREIGN KEY (numPedido) REFERENCES Pedidos(numPedido),  -- Foreign key constraint to Pedidos
     FOREIGN KEY (codigoProducto) REFERENCES Productos(codigoProducto)  -- Foreign key constraint to Productos
 );
-
